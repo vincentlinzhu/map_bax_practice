@@ -38,7 +38,7 @@ function App() {
       const point = event.result.center; // Capture the result coordinates
       const tileset = 'vinnie-the-zhu.0mx616lr'; // replace this with the ID of the tileset you created
       const radius = 1609; // 1609 meters is roughly equal to one mile
-      const limit = 500; // The maximum amount of results to return
+      const limit = 50; // The maximum amount of results to return
       marker.setLngLat(point).addTo(map.current); // Add the marker to the map at the result coordinates
       const query = await fetch(
         `https://api.mapbox.com/v4/${tileset}/tilequery/${point[0]},${point[1]}.json?radius=${radius}&limit=${limit}&access_token=${mapboxgl.accessToken}`,
